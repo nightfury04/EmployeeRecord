@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/Create.htm">EmployeeController</prop>
+				
+			</props>
+
+		</property>
+	</bean>
+
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass">
+			<value>org.springframework.web.servlet.view.JstlView</value>
+		</property>
+		<property name="prefix">
+			<value>/WEB-INF/jsp/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>
+
+	<bean id="EmployeeController" class="controller.EmployeeController">
+		<property name="sessionForm">
+			<value>true</value>
+		</property>
+		<property name="commandName">
+			<value>employee</value>
+		</property>
+		<property name="commandClass">
+			<value>bean.Employee</value>
+		</property>
+		<property name="formView">
+			<value>Create</value>
+		</property>
+	 	<property name="successView">
+			<value>Create.htm</value>
+		</property>
+	</bean>
+
+	<bean id="employee" class="bean.Employee"></bean>
+
+
+</beans>
