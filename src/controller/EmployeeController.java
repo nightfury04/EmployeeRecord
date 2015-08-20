@@ -62,12 +62,12 @@ public class EmployeeController extends SimpleFormController {
 //		objEmployee.setCompany(request.getParameter("company"));
 //		objEmployee.setSalary(request.getParameter("salary"));
 //		
-		EmployeeDAO eDAO = new EmployeeDAO();
-		eDAO.createEmployee(objEmployee);
+//		EmployeeDAO eDAO = new EmployeeDAO();
+//		eDAO.createEmployee(objEmployee);
 		
 		
-//		EmployeeHibernateDAO hDAO = new EmployeeHibernateDAO();
-//        hDAO.addEmployee(objEmployee);
+		EmployeeHibernateDAO hDAO = new EmployeeHibernateDAO();
+        hDAO.addEmployee(objEmployee);
 		
 		System.out.println("Leaving onSubmit.");		
 		
