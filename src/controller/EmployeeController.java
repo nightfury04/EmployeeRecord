@@ -44,7 +44,7 @@ public class EmployeeController extends SimpleFormController {
 	protected Object formBackingObject(HttpServletRequest req)throws ServletException
 	{
 		System.out.println("Inside backing object.");
-	    objEmployee =this.getObjEmployee();
+	    objEmployee = this.getObjEmployee();
 		return objEmployee;
 	}
 	

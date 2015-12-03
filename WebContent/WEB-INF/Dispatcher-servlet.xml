@@ -41,6 +41,10 @@
 	 	<property name="successView">
 			<value>Create.htm</value>
 		</property>
+		<property name="objEmployee">
+			<ref bean="employee"/>
+		</property>
+		
 	</bean>
 
 	<bean id="employee" class="bean.Employee"></bean>
